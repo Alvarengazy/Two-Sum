@@ -1,18 +1,44 @@
-## Getting Started
+# 🎯 Two Sum - Solução em Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 📋 Descrição
 
-## Folder Structure
+Este programa resolve o clássico problema **Two Sum**:
 
-The workspace contains two folders by default, where:
+> Dado um array de números inteiros e um valor alvo (`target`), encontrar dois números no array cuja soma seja igual ao `target`.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Ele retorna os **índices** desses números no array.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## ⚙️ Como funciona?
 
-## Dependency Management
+- Recebe do usuário:
+  - Tamanho do array
+  - Valores do array (números inteiros)
+  - Valor alvo (`target`)
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Utiliza um `HashMap` para armazenar números já visitados e seus índices.
+- Para cada número, calcula o complemento que falta para chegar ao target.
+- Se o complemento já estiver no mapa, retorna os índices.
+- Caso contrário, adiciona o número atual ao mapa e segue o loop.
+
+---
+
+## 📝 Estrutura do código
+
+```text
+twosum.java
+├── main()        # Entrada e saída de dados
+└── twoSum()      # Lógica para encontrar os índices
+```
+---
+# 🎯 Exemplo de uso
+```text
+Digite o tamanho da sua Array: 5
+Digite os valores da Array: 2 7 11 15 3
+Digite o valor de Target: 9
+Índices dos números que somam ao target: [0, 1]
+```
+---
+# 👨‍💻 Autor
+Feito por Alvarengazy
